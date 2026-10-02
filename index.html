@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="aoderu is a Computer Science student at the University of Indonesia interested in data, web development, computer vision, and machine learning."
+    >
+    <meta name="theme-color" content="#050505">
+    <title>aoderu's portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="aoderu, home">aoderu<span>.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-link" href="https://github.com/Kevinistic" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+        <p class="eyebrow">COMPUTER SCIENCE STUDENT <span>/</span> BUILDER <span>/</span> TUTOR</p>
+        <h1 id="hero-title">Hi, I’m <span class="name">aoderu.</span><br>I like making useful things.</h1>
+        <div class="hero-bottom">
+          <p>
+            Computer Science student at the University of Indonesia, interested
+            in data, the web, computer vision, and the parts of machine learning
+            I’m still figuring out.
+          </p>
+          <a class="text-link" href="#work">See what I’ve been working on <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="intro section-shell" id="about" aria-labelledby="about-title">
+        <div class="section-label section-label-illustrated">
+          <div class="section-title-row">
+            <span class="section-number">01</span>
+            <h2 id="about-title">A bit about me</h2>
+          </div>
+          <img class="section-image" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="144" height="144">
+        </div>
+        <div class="intro-content">
+          <p class="intro-lede">
+            I’m interested in how information gets shaped into something
+            people can actually use, whether that’s a searchable car catalog,
+            a data system, or a lesson that finally makes a hard topic click.
+          </p>
+          <div class="facts-grid">
+            <article class="fact">
+              <h3>Studying</h3>
+              <p>Computer Science<br>University of Indonesia</p>
+            </article>
+            <article class="fact">
+              <h3>Experience</h3>
+              <p>Data engineering intern at a state-owned data center company.</p>
+            </article>
+            <article class="fact">
+              <h3>Interested in</h3>
+              <p>Data · web · computer vision · machine learning (still wrestling with it)</p>
+            </article>
+          </div>
+          <p class="breadth-note">
+            I work across databases too: architecture, engineering, and data
+            science are all parts of the same problem-solving toolkit.
+          </p>
+        </div>
+      </section>
+
+      <section class="tutoring section-shell" aria-labelledby="tutoring-title">
+        <div class="section-label section-label-illustrated">
+          <div class="section-title-row">
+            <span class="section-number">02</span>
+            <h2 id="tutoring-title">Math, with a little firepower</h2>
+          </div>
+          <img class="section-image" src="assets/images/math.png" alt="Math tutoring" width="144" height="144">
+        </div>
+        <div class="tutoring-content">
+          <blockquote>
+            “Math is about utilising tools to shoot the bad guys (problems).
+            Get your arsenal ready!”
+            <cite>— aoderu</cite>
+          </blockquote>
+          <p>
+            I’ve tutored more than 10 students, from primary school through
+            high school, including A-levels and the IBDP. I like helping
+            students build an arsenal of methods they understand, so a tough
+            problem feels less like a wall and more like something they can
+            work through.
+          </p>
+        </div>
+      </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="section-label">
+          <span class="section-number">03</span>
+          <h2 id="work-title">Projects</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div class="project-body">
+              <p class="project-type">FULL-STACK WEB APP · PERSONAL PROJECT</p>
+              <h3>CDID Repo</h3>
+              <p>
+                An unofficial, up-to-date car wiki for Roblox Car Driving
+                Indonesia. Find newly added cars and filter the catalog by
+                where they appear, such as dealerships or gamepasses. I built
+                the whole app, from the database architecture through the
+                full-stack implementation.
+              </p>
+              <a class="project-link" href="https://cdidrepo.vercel.app/" target="_blank" rel="noreferrer">
+                Visit the wiki <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <span class="project-aside">LIVE SITE</span>
+          </article>
+
+          <article class="project">
+            <div class="project-number">02</div>
+            <div class="project-body">
+              <p class="project-type">AUTOMATION · MACHINE LEARNING</p>
+              <h3>CDID Barista</h3>
+              <p>
+                A macro for the reworked barista job in Roblox Car Driving
+                Indonesia. It handles the tasks that need a bit more thought:
+                the coffee minigame and choosing the right cup and syrup.
+              </p>
+              <p class="project-warning">
+                Download note: the main download is about 1 GB because it
+                includes the machine-learning assets.
+              </p>
+              <a class="project-link" href="https://github.com/Kevinistic/cdidbarista" target="_blank" rel="noreferrer">
+                View the repository <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <span class="project-aside">GITHUB</span>
+          </article>
+
+          <article class="project">
+            <div class="project-number">03</div>
+            <div class="project-body">
+              <p class="project-type">WEB TOOL · ROBLOX</p>
+              <h3>Customplate</h3>
+              <p>
+                Make a custom Indonesian license plate for Roblox slot cars.
+                Download the finished plate as a PNG, then import it into
+                Roblox Studio.
+              </p>
+              <a class="project-link" href="https://kevinistic.github.io/customplate/" target="_blank" rel="noreferrer">
+                Make a plate <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <span class="project-aside">LIVE SITE</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="skills section-shell" id="skills" aria-labelledby="skills-title">
+        <div class="section-label">
+          <span class="section-number">04</span>
+          <h2 id="skills-title">Tools I work with</h2>
+        </div>
+        <div class="skills-content">
+          <div class="skill-group">
+            <h3>Programming languages</h3>
+            <p>Python, Java, Rust, JavaScript, TypeScript, Lua, Roblox Luau, R, SQL</p>
+          </div>
+          <div class="skill-group">
+            <h3>Databases &amp; data libraries</h3>
+            <p>PostgreSQL, MySQL, MongoDB, NumPy, Matplotlib</p>
+          </div>
+          <div class="skill-group">
+            <h3>Web development</h3>
+            <p>React, Next.js, Tailwind CSS, HTML, CSS</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools &amp; platforms</h3>
+            <p>Git, GitHub, Grafana, Excel, Tableau, Canva</p>
+          </div>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>Bahasa Indonesia <span>(native)</span>, English <span>(IELTS 7)</span>, Mandarin <span>(HSK 2)</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+        <div class="section-label">
+          <span class="section-number">05</span>
+          <h2 id="contact-title">Find me online</h2>
+        </div>
+        <div class="contact-links">
+          <a href="https://github.com/Kevinistic" target="_blank" rel="noreferrer">
+            <span>GitHub</span><span class="contact-handle">Kevinistic</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.roblox.com/users/483143432/profile" target="_blank" rel="noreferrer">
+            <span>Roblox</span><span class="contact-handle">Profile</span><span aria-hidden="true">↗</span>
+          </a>
+          <details class="discord">
+            <summary><span>Discord</span><span class="contact-handle">Show username</span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
+            <div class="discord-content">
+              <span>aoderu</span>
+              <span class="discord-hint">Discord username</span>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
