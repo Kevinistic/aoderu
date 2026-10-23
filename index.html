@@ -1,225 +1,129 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="aoderu is a Computer Science student at the University of Indonesia interested in data, web development, computer vision, and machine learning."
-    >
-    <meta name="theme-color" content="#050505">
-    <title>aoderu's portfolio</title>
-    <link rel="icon" type="image/png" href="assets/images/icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>aoderu</title>
+  <meta name="description" content="CS Student (Data/Web) / Roblox Developer (on hiatus) / Math Tutor (Primary to A-Levels/IBDP) / Discord: aoderu">
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snow"></canvas>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <filter id="fuzz" x="-10%" y="-20%" width="120%" height="140%">
+      <feTurbulence id="fuzz-noise" type="fractalNoise" baseFrequency="0.9 0.04" numOctaves="2" seed="1" result="n"/>
+      <feDisplacementMap id="fuzz-map" in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 
-    <header class="site-header">
-      <a class="wordmark" href="#home" aria-label="aoderu, home">aoderu<span>.</span></a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#work">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="header-link" href="https://github.com/Kevinistic" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    </header>
+  <div class="sheet">
+  <section class="screen" id="top">
+  <main id="profile">
+    <div class="avatar">
+      <img class="avatar-img" src="assets/images/profile.png" alt="aoderu">
+    </div>
 
-    <main id="main">
-      <section class="hero section-shell" id="home" aria-labelledby="hero-title">
-        <p class="eyebrow">COMPUTER SCIENCE STUDENT <span>/</span> BUILDER <span>/</span> TUTOR</p>
-        <h1 id="hero-title">Hi, I’m <span class="name">aoderu.</span><br>I like making useful things.</h1>
-        <div class="hero-bottom">
-          <p>
-            Computer Science student at the University of Indonesia, interested
-            in data, the web, computer vision, and the parts of machine learning
-            I’m still figuring out.
-          </p>
-          <a class="text-link" href="#work">See what I’ve been working on <span aria-hidden="true">↓</span></a>
-        </div>
-      </section>
+    <h1 class="title">Hi, I'm <span class="glitch" data-text="aoderu">aoderu</span>.<br>I like making useful things.</h1>
 
-      <section class="intro section-shell" id="about" aria-labelledby="about-title">
-        <div class="section-label section-label-illustrated">
-          <div class="section-title-row">
-            <span class="section-number">01</span>
-            <h2 id="about-title">A bit about me</h2>
+    <a class="about-btn" href="#about">About Me</a>
+
+    <nav class="socials">
+      <a href="https://github.com/Kevinistic" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="2.05 2 19.95 19.46" fill="currentColor"><path fill-rule="evenodd" d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974c0 4.406 2.857 8.145 6.821 9.465c.499.09.679-.217.679-.481c0-.237-.008-.865-.011-1.696c-2.775.602-3.361-1.338-3.361-1.338c-.452-1.152-1.107-1.459-1.107-1.459c-.905-.619.069-.605.069-.605c1.002.07 1.527 1.028 1.527 1.028c.89 1.524 2.336 1.084 2.902.829c.091-.645.351-1.085.635-1.334c-2.214-.251-4.542-1.107-4.542-4.93c0-1.087.389-1.979 1.024-2.675c-.101-.253-.446-1.268.099-2.64c0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336a9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021c.545 1.372.203 2.387.099 2.64c.64.696 1.024 1.587 1.024 2.675c0 3.833-2.33 4.675-4.552 4.922c.355.308.675.916.675 1.846c0 1.334-.012 2.41-.012 2.737c0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974C22 6.465 17.535 2 12.026 2z" clip-rule="evenodd"/></svg>
+      </a>
+      <a href="https://roblox.com/users/483143432/profile" target="_blank" rel="noopener" aria-label="Roblox">
+        <svg viewBox="0.16 0 23.68 24" fill="currentColor"><path d="M5.164 0L.16 18.928L18.836 24L23.84 5.072Zm8.747 15.354l-5.219-1.417l1.399-5.29l5.22 1.418l-1.4 5.29z"/></svg>
+      </a>
+      <button type="button" id="discord" class="copy-btn" data-tooltip="Discord: aoderu" aria-label="Copy Discord username">
+        <svg viewBox="1.96 4.26 20.03 15.53" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.095 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.095 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" transform="translate(1.5 2.9) scale(.84)"/></svg>
+      </button>
+    </nav>
+  </main>
+  </section>
+
+  <div class="portfolio">
+    <div class="left">
+      <div class="top">
+        <section class="card reveal" id="about">
+          <div class="card-head">
+            <h2>About</h2>
+            <img class="thumb" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="96" height="96">
           </div>
-          <img class="section-image" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="144" height="144">
-        </div>
-        <div class="intro-content">
-          <p class="intro-lede">
-            I’m interested in how information gets shaped into something
-            people can actually use, whether that’s a searchable car catalog,
-            a data system, or a lesson that finally makes a hard topic click.
-          </p>
-          <div class="facts-grid">
-            <article class="fact">
-              <h3>Studying</h3>
-              <p>Computer Science<br>University of Indonesia</p>
-            </article>
-            <article class="fact">
-              <h3>Experience</h3>
-              <p>Data engineering intern at a state-owned data center company.</p>
-            </article>
-            <article class="fact">
-              <h3>Interested in</h3>
-              <p>Data · web · computer vision · machine learning (still wrestling with it)</p>
-            </article>
-          </div>
-          <p class="breadth-note">
-            I work across databases too: architecture, engineering, and data
-            science are all parts of the same problem-solving toolkit.
-          </p>
-        </div>
-      </section>
+          <p>I'm interested in how information gets shaped into something people can actually use. Mostly I'm figuring it out by building things and explaining them to others.</p>
+          <dl class="facts">
+            <div><dt>Studying</dt><dd>Computer Science, University of Indonesia</dd></div>
+            <div><dt>Experience</dt><dd>Data engineering intern at a state-owned data center company</dd></div>
+            <div><dt>Interested in</dt><dd>Data · web · computer vision · machine learning (still wrestling with it)</dd></div>
+          <div><dt>Languages I speak</dt><dd class="flags"><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Indonesia"><rect width="30" height="10" fill="#ce1126"/><rect y="10" width="30" height="10" fill="#fff"/></svg><svg class="flag" viewBox="0 0 60 40" role="img" aria-label="United Kingdom"><rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="6"/><path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="2"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="10"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="6"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Hong Kong"><rect width="30" height="20" fill="#de2910"/><g fill="#fff" transform="translate(15 10)"><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(0)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(72)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(144)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(216)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(288)"/></g></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="People's Republic of China"><rect width="30" height="20" fill="#de2910"/><polygon fill="#ffde00" points="5.00,2.00 5.67,4.07 7.85,4.07 6.09,5.35 6.76,7.43 5.00,6.15 3.24,7.43 3.91,5.35 2.15,4.07 4.33,4.07"/><polygon fill="#ffde00" points="10.24,1.03 10.29,1.75 11.00,1.93 10.32,2.20 10.37,2.93 9.91,2.37 9.23,2.64 9.62,2.03 9.15,1.47 9.86,1.65"/><polygon fill="#ffde00" points="12.62,3.21 12.37,3.89 12.94,4.34 12.21,4.32 11.97,5.00 11.76,4.30 11.04,4.28 11.64,3.87 11.44,3.17 12.01,3.62"/><polygon fill="#ffde00" points="12.88,6.53 12.38,7.05 12.72,7.69 12.07,7.38 11.56,7.90 11.66,7.18 11.01,6.86 11.73,6.73 11.83,6.02 12.17,6.66"/><polygon fill="#ffde00" points="11.00,8.93 10.32,9.20 10.37,9.93 9.91,9.37 9.23,9.64 9.62,9.03 9.15,8.47 9.86,8.65 10.24,8.03 10.29,8.75"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Japan"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg></dd></div>
+          </dl>
+        </section>
 
-      <section class="tutoring section-shell" aria-labelledby="tutoring-title">
-        <div class="section-label section-label-illustrated">
-          <div class="section-title-row">
-            <span class="section-number">02</span>
-            <h2 id="tutoring-title">Math, with a little firepower</h2>
+        <div class="stack">
+        <section class="card reveal">
+          <div class="card-head">
+            <h2>Math Tutor</h2>
+            <img class="thumb" src="assets/images/math.png" alt="Math tutoring" width="96" height="96">
           </div>
-          <img class="section-image" src="assets/images/math.png" alt="Math tutoring" width="144" height="144">
-        </div>
-        <div class="tutoring-content">
-          <blockquote>
-            “Math is about utilising tools to shoot the bad guys (problems).
-            Get your arsenal ready!”
-            <cite>— aoderu</cite>
-          </blockquote>
-          <p>
-            I’ve tutored more than 10 students, from primary school through
-            high school, including A-levels and the IBDP. I like helping
-            students build an arsenal of methods they understand, so a tough
-            problem feels less like a wall and more like something they can
-            work through.
-          </p>
-        </div>
-      </section>
+          <p>I've tutored more than 10 students, from primary school through high school, including A-levels and the IBDP. I like helping students build an arsenal of methods they understand, so a tough problem feels less like a wall and more like something they can work through.</p>
+          <p class="contact-line">Contact me on Discord!</p>
+        </section>
 
-      <section class="work section-shell" id="work" aria-labelledby="work-title">
-        <div class="section-label">
-          <span class="section-number">03</span>
-          <h2 id="work-title">Projects</h2>
+        <section class="card reveal">
+          <h2>Roblox Developer <span class="tag">on hiatus</span></h2>
+          <ul class="bullets">
+            <li><span class="what"><a class="inline-link" href="https://www.roblox.com/games/680750021/Case-Clicker" target="_blank" rel="noopener">Case Clicker</a> <em>Backend Scripter</em></span><span class="when">Dec 2021 - Apr 2022</span></li>
+            <li class="dead"><span class="what">Hikikomori Simulator <em>Fullstack</em></span><span class="when">Apr 2024 - Jan 2025</span></li>
+            <li class="dead"><span class="what">Mount Janera <em>Fullstack</em></span><span class="when">Sep 2025 - Dec 2025</span></li>
+          </ul>
+        </section>
         </div>
-        <div class="project-list">
-          <article class="project">
-            <div class="project-number">01</div>
-            <div class="project-body">
-              <p class="project-type">FULL-STACK WEB APP · PERSONAL PROJECT</p>
-              <h3>CDID Repo</h3>
-              <p>
-                An unofficial, up-to-date car wiki for Roblox Car Driving
-                Indonesia. Find newly added cars and filter the catalog by
-                where they appear, such as dealerships or gamepasses. I built
-                the whole app, from the database architecture through the
-                full-stack implementation.
-              </p>
-              <a class="project-link" href="https://cdidrepo.vercel.app/" target="_blank" rel="noreferrer">
-                Visit the wiki <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <span class="project-aside">LIVE SITE</span>
-          </article>
+      </div>
 
-          <article class="project">
-            <div class="project-number">02</div>
-            <div class="project-body">
-              <p class="project-type">AUTOMATION · MACHINE LEARNING</p>
-              <h3>CDID Barista</h3>
-              <p>
-                A macro for the reworked barista job in Roblox Car Driving
-                Indonesia. It handles the tasks that need a bit more thought:
-                the coffee minigame and choosing the right cup and syrup.
-              </p>
-              <p class="project-warning">
-                Download note: the main download is about 1 GB because it
-                includes the machine-learning assets.
-              </p>
-              <a class="project-link" href="https://github.com/Kevinistic/cdidbarista" target="_blank" rel="noreferrer">
-                View the repository <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <span class="project-aside">GITHUB</span>
-          </article>
+      <div class="bottom">
+        <h2 class="label reveal">Tools I work with</h2>
+        <section class="card reveal skills">
+          <h3>Programming languages</h3>
+          <ul class="chips"><li>Python</li><li>Java</li><li>Rust</li><li>JavaScript</li><li>TypeScript</li><li>Lua</li><li>Roblox Luau</li><li>R</li><li>SQL</li></ul>
+          <h3>Databases &amp; data libraries</h3>
+          <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>NumPy</li><li>Matplotlib</li></ul>
+          <h3>Web development</h3>
+          <ul class="chips"><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>HTML</li><li>CSS</li></ul>
+          <h3>Tools &amp; platforms</h3>
+          <ul class="chips"><li>Git</li><li>GitHub</li><li>Grafana</li><li>Excel</li><li>Tableau</li><li>Canva</li></ul>
+        </section>
+      </div>
+    </div>
 
-          <article class="project">
-            <div class="project-number">03</div>
-            <div class="project-body">
-              <p class="project-type">WEB TOOL · ROBLOX</p>
-              <h3>Customplate</h3>
-              <p>
-                Make a custom Indonesian license plate for Roblox slot cars.
-                Download the finished plate as a PNG, then import it into
-                Roblox Studio.
-              </p>
-              <a class="project-link" href="https://kevinistic.github.io/customplate/" target="_blank" rel="noreferrer">
-                Make a plate <span aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <span class="project-aside">LIVE SITE</span>
-          </article>
-        </div>
-      </section>
+    <div class="right">
+      <h2 class="label reveal">Projects</h2>
 
-      <section class="skills section-shell" id="skills" aria-labelledby="skills-title">
-        <div class="section-label">
-          <span class="section-number">04</span>
-          <h2 id="skills-title">Tools I work with</h2>
-        </div>
-        <div class="skills-content">
-          <div class="skill-group">
-            <h3>Programming languages</h3>
-            <p>Python, Java, Rust, JavaScript, TypeScript, Lua, Roblox Luau, R, SQL</p>
-          </div>
-          <div class="skill-group">
-            <h3>Databases &amp; data libraries</h3>
-            <p>PostgreSQL, MySQL, MongoDB, NumPy, Matplotlib</p>
-          </div>
-          <div class="skill-group">
-            <h3>Web development</h3>
-            <p>React, Next.js, Tailwind CSS, HTML, CSS</p>
-          </div>
-          <div class="skill-group">
-            <h3>Tools &amp; platforms</h3>
-            <p>Git, GitHub, Grafana, Excel, Tableau, Canva</p>
-          </div>
-          <div class="skill-group">
-            <h3>Languages</h3>
-            <p>Bahasa Indonesia <span>(native)</span>, English <span>(IELTS 7)</span>, Mandarin <span>(HSK 2)</span></p>
-          </div>
-        </div>
-      </section>
+      <article class="card reveal has-bg bg-repo">
+        <p class="kicker">Full-stack web app · Personal project</p>
+        <h3>CDID Repo</h3>
+        <p>An unofficial, up-to-date car wiki for Roblox Car Driving Indonesia. Find newly added cars and filter the catalog by where they appear, such as dealerships or gamepasses. I built the whole app, from the database architecture through the full-stack implementation.</p>
+        <a class="card-link" href="https://cdidrepo.vercel.app/" target="_blank" rel="noopener">Visit the wiki ↗</a>
+      </article>
 
-      <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
-        <div class="section-label">
-          <span class="section-number">05</span>
-          <h2 id="contact-title">Find me online</h2>
-        </div>
-        <div class="contact-links">
-          <a href="https://github.com/Kevinistic" target="_blank" rel="noreferrer">
-            <span>GitHub</span><span class="contact-handle">Kevinistic</span><span aria-hidden="true">↗</span>
-          </a>
-          <a href="https://www.roblox.com/users/483143432/profile" target="_blank" rel="noreferrer">
-            <span>Roblox</span><span class="contact-handle">Profile</span><span aria-hidden="true">↗</span>
-          </a>
-          <details class="discord">
-            <summary><span>Discord</span><span class="contact-handle">Show username</span><span class="disclosure-icon" aria-hidden="true">+</span></summary>
-            <div class="discord-content">
-              <span>aoderu</span>
-              <span class="discord-hint">Discord username</span>
-            </div>
-          </details>
-        </div>
-      </section>
-    </main>
-  </body>
+      <article class="card reveal">
+        <p class="kicker">Automation · Computer Vision · Machine Learning</p>
+        <h3>CDID Barista</h3>
+        <p>A macro for the reworked barista job in Roblox Car Driving Indonesia. It handles the tasks that need a bit more thought: the coffee minigame and choosing the right cup and syrup.</p>
+        <p class="note">Download note: the main download is about 1 GB because it includes the machine-learning assets.</p>
+        <a class="card-link" href="https://github.com/Kevinistic/cdidbarista" target="_blank" rel="noopener">View the repository ↗</a>
+      </article>
+
+      <article class="card reveal has-bg bg-plate">
+        <p class="kicker">Web tool · Roblox Studio</p>
+        <h3>Customplate</h3>
+        <p>Make a custom Indonesian license plate for Roblox slot cars. Download the finished plate as a PNG, then import it into Roblox Studio.</p>
+        <a class="card-link" href="https://kevinistic.github.io/customplate/" target="_blank" rel="noopener">Make a plate ↗</a>
+      </article>
+    </div>
+  </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
