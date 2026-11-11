@@ -43,6 +43,26 @@
   tick();
 })();
 
+/* sync avatar with discord via lanyard; keeps the local image on any failure */
+(() => {
+  const DISCORD_ID = "894170177330098217";
+  const img = document.querySelector(".avatar-img");
+  if (!img) return;
+
+  fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`)
+    .then((r) => (r.ok ? r.json() : Promise.reject()))
+    .then(({ data }) => {
+      const hash = data && data.discord_user && data.discord_user.avatar;
+      if (!hash) return;
+      const ext = hash.startsWith("a_") ? "gif" : "png";
+      const src = `https://cdn.discordapp.com/avatars/${DISCORD_ID}/${hash}.${ext}?size=256`;
+      const pre = new Image();
+      pre.onload = () => (img.src = src); // swap only once it has loaded
+      pre.src = src;
+    })
+    .catch(() => {});
+})();
+
 /* copy discord username */
 (() => {
   const btn = document.getElementById("discord");
