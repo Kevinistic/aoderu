@@ -215,7 +215,7 @@ body {
 .inline-link:hover { border-color: #fff; }
 .bullets .when { flex: none; text-align: right; font-size: 0.8em; color: var(--muted); }
 .bullets .dead .what { color: var(--red); }
-.bullets .dead em { color: #fff; }
+.bullets .dead em { color: var(--muted); }
 .bottom .skills { flex: 1; }
 .right .card { flex: 1; }
 
