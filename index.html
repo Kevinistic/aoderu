@@ -22,7 +22,7 @@
   <section class="screen" id="top">
   <main id="profile">
     <div class="avatar">
-      <img class="avatar-img" src="assets/images/profile.png" alt="aoderu">
+      <img class="avatar-img" alt="aoderu">
     </div>
 
     <h1 class="title">Hi, I'm <span class="glitch" data-text="aoderu">aoderu</span>.<br>I like making useful things.</h1>
@@ -46,39 +46,60 @@
   <div class="portfolio">
     <div class="left">
       <div class="top">
-        <section class="card reveal" id="about">
-          <div class="card-head">
-            <h2>About</h2>
-            <img class="thumb" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="96" height="96">
+        <section class="card reveal tabbed" id="about">
+          <div class="tabs" role="tablist" aria-label="About me">
+            <button type="button" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
+            <button type="button" role="tab" id="tab-math" aria-controls="panel-math" aria-selected="false" tabindex="-1">Math Tutor</button>
+            <button type="button" role="tab" id="tab-roblox" aria-controls="panel-roblox" aria-selected="false" tabindex="-1">Roblox Developer</button>
           </div>
-          <p>I'm interested in how information gets shaped into something people can actually use. Mostly I'm figuring it out by building things and explaining them to others.</p>
+          <div class="panels">
+            <div class="panel active" role="tabpanel" id="panel-about" aria-labelledby="tab-about">
+              <div class="card-head">
+                <div class="head-text">
+                  <h2>About</h2>
+                  <p>I'm interested in how information gets shaped into something people can actually use. Mostly I'm figuring it out by building things and explaining them to others.</p>
+                </div>
+                <img class="thumb" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="96" height="96">
+              </div>
           <dl class="facts">
             <div><dt>Studying</dt><dd>Computer Science, University of Indonesia</dd></div>
             <div><dt>Experience</dt><dd>Data engineering intern at a state-owned data center company</dd></div>
             <div><dt>Interested in</dt><dd>Data · Web · Computer Vision · Machine Learning (i suck at this)</dd></div>
           <div><dt>Languages I speak</dt><dd class="flags"><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Indonesia"><rect width="30" height="10" fill="#ce1126"/><rect y="10" width="30" height="10" fill="#fff"/></svg><svg class="flag" viewBox="0 0 60 40" role="img" aria-label="United Kingdom"><rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="6"/><path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="2"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="10"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="6"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Hong Kong"><rect width="30" height="20" fill="#de2910"/><g fill="#fff" transform="translate(15 10)"><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(0)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(72)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(144)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(216)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(288)"/></g></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="People's Republic of China"><rect width="30" height="20" fill="#de2910"/><polygon fill="#ffde00" points="5.00,2.00 5.67,4.07 7.85,4.07 6.09,5.35 6.76,7.43 5.00,6.15 3.24,7.43 3.91,5.35 2.15,4.07 4.33,4.07"/><polygon fill="#ffde00" points="10.24,1.03 10.29,1.75 11.00,1.93 10.32,2.20 10.37,2.93 9.91,2.37 9.23,2.64 9.62,2.03 9.15,1.47 9.86,1.65"/><polygon fill="#ffde00" points="12.62,3.21 12.37,3.89 12.94,4.34 12.21,4.32 11.97,5.00 11.76,4.30 11.04,4.28 11.64,3.87 11.44,3.17 12.01,3.62"/><polygon fill="#ffde00" points="12.88,6.53 12.38,7.05 12.72,7.69 12.07,7.38 11.56,7.90 11.66,7.18 11.01,6.86 11.73,6.73 11.83,6.02 12.17,6.66"/><polygon fill="#ffde00" points="11.00,8.93 10.32,9.20 10.37,9.93 9.91,9.37 9.23,9.64 9.62,9.03 9.15,8.47 9.86,8.65 10.24,8.03 10.29,8.75"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Japan"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg></dd></div>
           </dl>
-        </section>
-
-        <div class="stack">
-        <section class="card reveal">
-          <div class="card-head">
-            <h2>Math Tutor</h2>
-            <img class="thumb" src="assets/images/math.png" alt="Math tutoring" width="96" height="96">
-          </div>
-          <p>I've tutored more than 10 students, from primary school through high school, including A-levels and the IBDP. I like helping students build an arsenal of methods they understand, so a tough problem feels less like a wall and more like something they can work through.</p>
-          <p class="contact-line">Contact me on Discord!</p>
-        </section>
-
-        <section class="card reveal">
-          <h2>Roblox Developer <span class="tag">on hiatus</span></h2>
-          <ul class="bullets">
+            </div>
+            <div class="panel" role="tabpanel" id="panel-math" aria-labelledby="tab-math" inert>
+              <div class="card-head">
+                <div class="head-text">
+                  <h2>Math Tutor</h2>
+                  <p>I've tutored more than 10 students, from primary school through high school, including A-levels and the IBDP. I like helping students build an arsenal of methods they understand, so a tough problem feels less like a wall and more like something they can work through.</p>
+                </div>
+                <img class="thumb" src="assets/images/math.png" alt="Math tutoring" width="96" height="96">
+              </div>
+              <p class="kicker subjects-label">School · Primary to A-Levels/IBDP</p>
+              <ul class="chips"><li>Arithmetic</li><li>Algebra</li><li>Geometry</li><li>Functions</li><li>Trigonometry</li><li>Sequences &amp; Series</li><li>Vectors &amp; Matrices</li><li>Statistics &amp; Probability</li><li>Calculus</li><li>Complex Numbers</li></ul>
+              <p class="kicker subjects-label">University</p>
+              <ul class="chips"><li>Discrete Mathematics</li><li>Linear Algebra</li><li>Statistics &amp; Probability</li><li>Numerical Analysis</li></ul>
+              <p class="contact-line">Contact me on Discord!</p>
+            </div>
+            <div class="panel" role="tabpanel" id="panel-roblox" aria-labelledby="tab-roblox" inert>
+              <div class="card-head">
+                <div class="head-text">
+                  <h2>Roblox Developer <span class="tag">on hiatus</span></h2>
+                  <p>My journey as a Roblox Developer started off.. rough. It was Pre-AI era, so I had to learn everything by myself. I made a few connections here and there, and it landed me my first job (Case Clicker). From then on, I tried a few gigs as a fullstack developer, and had to go on hiatus due to my uni schedules. I'm still open for any opportunities!</p>
+                </div>
+                <a class="rbx-thumb" href="https://www.roblox.com/users/483143432/profile" target="_blank" rel="noopener" aria-label="Roblox profile">
+                  <img class="thumb" src="assets/images/roblox.png" alt="Roblox avatar of aoderu" width="96" height="96">
+                </a>
+              </div>
+              <ul class="bullets">
             <li><span class="what"><a class="inline-link" href="https://www.roblox.com/games/680750021/Case-Clicker" target="_blank" rel="noopener">Case Clicker</a> <em>Backend Scripter</em></span><span class="when">Dec 2021 - Apr 2022</span></li>
             <li class="dead"><span class="what">Hikikomori Simulator <em>Fullstack</em></span><span class="when">Apr 2024 - Jan 2025</span></li>
             <li class="dead"><span class="what">Mount Janera <em>Fullstack</em></span><span class="when">Sep 2025 - Dec 2025</span></li>
           </ul>
+            </div>
+          </div>
         </section>
-        </div>
       </div>
 
       <div class="bottom">
@@ -103,7 +124,7 @@
         <p class="kicker">Full-stack web app · Personal project</p>
         <h3>CDID Repo</h3>
         <p>An unofficial, up-to-date car wiki for Roblox Car Driving Indonesia. Find newly added cars and filter the catalog by where they appear, such as dealerships or gamepasses. I built the whole app, from the database architecture through the full-stack implementation.</p>
-        <a class="card-link" href="https://cdidrepo.vercel.app/" target="_blank" rel="noopener">Visit the wiki ↗</a>
+        <a class="card-link" href="https://cdidrepo.web.id/" target="_blank" rel="noopener">Visit the wiki ↗</a>
       </article>
 
       <article class="card reveal">

@@ -43,7 +43,7 @@
   tick();
 })();
 
-/* sync avatar with discord via lanyard; keeps the local image on any failure */
+/* load avatar from discord via lanyard; stays hidden if it fails */
 (() => {
   const DISCORD_ID = "894170177330098217";
   const img = document.querySelector(".avatar-img");
@@ -115,4 +115,30 @@
     map.setAttribute("scale", scale.toFixed(1));
     noise.setAttribute("baseFrequency", burst > 0 ? "0.5 0.12" : "0.9 0.04");
   }, 60);
+})();
+
+/* about card tabs */
+(() => {
+  const tabs = [...document.querySelectorAll('.tabs [role="tab"]')];
+  if (!tabs.length) return;
+  const select = (tab) => {
+    tabs.forEach((t) => {
+      const on = t === tab;
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+      const panel = document.getElementById(t.getAttribute("aria-controls"));
+      panel.classList.toggle("active", on);
+      panel.inert = !on;
+    });
+  };
+  tabs.forEach((tab, i) => {
+    tab.addEventListener("click", () => select(tab));
+    tab.addEventListener("keydown", (e) => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (!step) return;
+      const next = tabs[(i + step + tabs.length) % tabs.length];
+      select(next);
+      next.focus();
+    });
+  });
 })();
