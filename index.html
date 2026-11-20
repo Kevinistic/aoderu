@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>aoderu</title>
   <meta name="description" content="CS Student (Data/Web) / Roblox Developer (on hiatus) / Math Tutor (Primary to A-Levels/IBDP) / Discord: aoderu">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="aoderu">
+  <meta property="og:title" content="aoderu">
+  <meta property="og:description" content="CS student (Data/Web), Roblox developer (on hiatus) and math tutor. I like making useful things.">
+  <meta property="og:url" content="https://kevinistic.github.io/aoderu/">
+  <meta property="og:image" content="https://kevinistic.github.io/aoderu/assets/images/icon.png">
+  <meta property="og:image:width" content="399">
+  <meta property="og:image:height" content="399">
+  <meta property="og:image:alt" content="aoderu logo">
+  <meta name="twitter:card" content="summary">
+
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
   <link rel="stylesheet" href="style.css">
@@ -23,6 +38,7 @@
   <main id="profile">
     <div class="avatar">
       <img class="avatar-img" alt="aoderu">
+      <span class="status-dot" hidden></span>
     </div>
 
     <h1 class="title">Hi, I'm <span class="glitch" data-text="aoderu">aoderu</span>.<br>I like making useful things.</h1>
@@ -40,12 +56,20 @@
         <svg viewBox="1.96 4.26 20.03 15.53" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.095 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.095 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z" transform="translate(1.5 2.9) scale(.84)"/></svg>
       </button>
     </nav>
+
+    <p class="now">
+      <span class="now-status" hidden><span class="now-dot"></span><span class="now-status-text"></span><span class="now-sep" aria-hidden="true">·</span></span>
+      <span class="now-time">it's <time id="local-time">--:--</time> for me <span class="now-tz">(WIB)</span></span>
+    </p>
+    <p class="custom-status" hidden><span class="custom-emoji"></span><span class="custom-text"></span></p>
+    <div class="activities" aria-label="What I'm doing right now"></div>
+
+    <span id="copy-status" class="sr-only" role="status" aria-live="polite"></span>
   </main>
   </section>
 
   <div class="portfolio">
     <div class="left">
-      <div class="top">
         <section class="card reveal tabbed" id="about">
           <div class="tabs" role="tablist" aria-label="About me">
             <button type="button" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About</button>
@@ -59,11 +83,10 @@
                   <h2>About</h2>
                   <p>I'm interested in how information gets shaped into something people can actually use. Mostly I'm figuring it out by building things and explaining them to others.</p>
                 </div>
-                <img class="thumb" src="assets/images/aboutme.png" alt="Portrait of aoderu" width="96" height="96">
+                <img class="thumb" src="assets/images/aboutme.webp" alt="Portrait of aoderu" width="96" height="96">
               </div>
           <dl class="facts">
             <div><dt>Studying</dt><dd>Computer Science, University of Indonesia</dd></div>
-            <div><dt>Experience</dt><dd>Data engineering intern at a state-owned data center company</dd></div>
             <div><dt>Interested in</dt><dd>Data · Web · Computer Vision · Machine Learning (i suck at this)</dd></div>
           <div><dt>Languages I speak</dt><dd class="flags"><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Indonesia"><rect width="30" height="10" fill="#ce1126"/><rect y="10" width="30" height="10" fill="#fff"/></svg><svg class="flag" viewBox="0 0 60 40" role="img" aria-label="United Kingdom"><rect width="60" height="40" fill="#012169"/><path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="6"/><path d="M0 0 60 40M60 0 0 40" stroke="#c8102e" stroke-width="2"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="10"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="6"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Hong Kong"><rect width="30" height="20" fill="#de2910"/><g fill="#fff" transform="translate(15 10)"><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(0)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(72)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(144)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(216)"/><ellipse rx="1.7" ry="3.4" cy="-3.3" transform="rotate(288)"/></g></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="People's Republic of China"><rect width="30" height="20" fill="#de2910"/><polygon fill="#ffde00" points="5.00,2.00 5.67,4.07 7.85,4.07 6.09,5.35 6.76,7.43 5.00,6.15 3.24,7.43 3.91,5.35 2.15,4.07 4.33,4.07"/><polygon fill="#ffde00" points="10.24,1.03 10.29,1.75 11.00,1.93 10.32,2.20 10.37,2.93 9.91,2.37 9.23,2.64 9.62,2.03 9.15,1.47 9.86,1.65"/><polygon fill="#ffde00" points="12.62,3.21 12.37,3.89 12.94,4.34 12.21,4.32 11.97,5.00 11.76,4.30 11.04,4.28 11.64,3.87 11.44,3.17 12.01,3.62"/><polygon fill="#ffde00" points="12.88,6.53 12.38,7.05 12.72,7.69 12.07,7.38 11.56,7.90 11.66,7.18 11.01,6.86 11.73,6.73 11.83,6.02 12.17,6.66"/><polygon fill="#ffde00" points="11.00,8.93 10.32,9.20 10.37,9.93 9.91,9.37 9.23,9.64 9.62,9.03 9.15,8.47 9.86,8.65 10.24,8.03 10.29,8.75"/></svg><svg class="flag" viewBox="0 0 30 20" role="img" aria-label="Japan"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg></dd></div>
           </dl>
@@ -74,22 +97,21 @@
                   <h2>Math Tutor</h2>
                   <p>I've tutored more than 10 students, from primary school through high school, including A-levels and the IBDP. I like helping students build an arsenal of methods they understand, so a tough problem feels less like a wall and more like something they can work through.</p>
                 </div>
-                <img class="thumb" src="assets/images/math.png" alt="Math tutoring" width="96" height="96">
+                <img class="thumb" src="assets/images/math.webp" alt="Math tutoring" width="96" height="96">
               </div>
               <p class="kicker subjects-label">School · Primary to A-Levels/IBDP</p>
               <ul class="chips"><li>Arithmetic</li><li>Algebra</li><li>Geometry</li><li>Functions</li><li>Trigonometry</li><li>Sequences &amp; Series</li><li>Vectors &amp; Matrices</li><li>Statistics &amp; Probability</li><li>Calculus</li><li>Complex Numbers</li></ul>
               <p class="kicker subjects-label">University</p>
               <ul class="chips"><li>Discrete Mathematics</li><li>Linear Algebra</li><li>Statistics &amp; Probability</li><li>Numerical Analysis</li></ul>
-              <p class="contact-line">Contact me on Discord!</p>
             </div>
             <div class="panel" role="tabpanel" id="panel-roblox" aria-labelledby="tab-roblox" inert>
               <div class="card-head">
                 <div class="head-text">
                   <h2>Roblox Developer <span class="tag">on hiatus</span></h2>
-                  <p>My journey as a Roblox Developer started off.. rough. It was Pre-AI era, so I had to learn everything by myself. I made a few connections here and there, and it landed me my first job (Case Clicker). From then on, I tried a few gigs as a fullstack developer, and had to go on hiatus due to my uni schedules. I'm still open for any opportunities!</p>
+                  <p>My journey as a Roblox Developer started off.. rough. It was Pre-AI era, so I had to learn everything by myself. I made a few connections here and there, and it landed me my first job (Case Clicker). From then on, I tried a few gigs as a fullstack developer, and had to go on hiatus due to my uni schedules.</p>
                 </div>
                 <a class="rbx-thumb" href="https://www.roblox.com/users/483143432/profile" target="_blank" rel="noopener" aria-label="Roblox profile">
-                  <img class="thumb" src="assets/images/roblox.png" alt="Roblox avatar of aoderu" width="96" height="96">
+                  <img class="thumb" src="assets/images/roblox.webp" alt="Roblox avatar of aoderu" width="96" height="96">
                 </a>
               </div>
               <ul class="bullets">
@@ -100,7 +122,6 @@
             </div>
           </div>
         </section>
-      </div>
 
       <div class="bottom">
         <h2 class="label reveal">Tools I work with</h2>
@@ -125,6 +146,13 @@
         <h3>CDID Repo</h3>
         <p>An unofficial, up-to-date car wiki for Roblox Car Driving Indonesia. Find newly added cars and filter the catalog by where they appear, such as dealerships or gamepasses. I built the whole app, from the database architecture through the full-stack implementation.</p>
         <a class="card-link" href="https://cdidrepo.web.id/" target="_blank" rel="noopener">Visit the wiki ↗</a>
+      </article>
+
+      <article class="card reveal has-bg bg-pdf">
+        <p class="kicker">Desktop app · Rust</p>
+        <h3>deruPDF</h3>
+        <p>A small, fast PDF reader that stays on top of other windows. Built with Rust and egui, using PDFium (Chrome's PDF engine) for rendering and search. It only renders the pages you can see, at your screen's resolution.</p>
+        <a class="card-link" href="https://github.com/Kevinistic/deruPDF/releases" target="_blank" rel="noopener">Download it ↗</a>
       </article>
 
       <article class="card reveal">
