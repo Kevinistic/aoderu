@@ -216,6 +216,20 @@ a:focus-visible, button:focus-visible { outline: 2px solid #fff; outline-offset:
 .status-dot[data-status="idle"], .now-dot[data-status="idle"] { --status: #f0b232; }
 .status-dot[data-status="dnd"], .now-dot[data-status="dnd"] { --status: #f23f43; }
 
+/* Discord's status shapes: cut a background-colored piece out of the dot.
+   idle = moon, dnd = bar, offline = ring, online = plain dot */
+.now-dot { position: relative; }
+.status-dot::after, .now-dot::after {
+  content: "";
+  position: absolute;
+  display: none;
+  background: var(--bg);
+  border-radius: 50%;
+}
+:is(.status-dot, .now-dot)[data-status="idle"]::after { display: block; width: 75%; height: 75%; left: -12.5%; top: -12.5%; }
+:is(.status-dot, .now-dot)[data-status="dnd"]::after { display: block; width: 75%; height: 25%; left: 12.5%; top: 37.5%; border-radius: 999px; }
+:is(.status-dot, .now-dot)[data-status="offline"]::after { display: block; width: 50%; height: 50%; left: 25%; top: 25%; }
+
 .now {
   display: flex;
   flex-wrap: wrap;
